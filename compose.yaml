@@ -1,0 +1,19 @@
+services:
+
+  tests:
+    build: .
+    image: receipt-app
+    command: pytest tests/unit_tests.py
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+
+  app:
+    extends: tests
+    command: fastapi run app.py
+    depends_on:
+      tests:
+        condition: service_completed_successfully
+        restart: false
+        required: true

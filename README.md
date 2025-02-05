@@ -1,12 +1,8 @@
 # Fetch Take Home
 
----
-
 ## How To Run
 
 Just run `./start.sh`.
-
----
 
 ## What It'll Do
 
@@ -14,14 +10,10 @@ It *should* build an image, use the image to run unit tests, then use the same
 image to run `app.py`.  From there the service should be reachable at:
 http://127.0.0.1:8000/docs
 
----
-
 ## Troubleshooting
 
 If it doesn't JustWork™, then you likely need to install or update and configure
 Docker.  
-
----
 
 ## Validating
 
@@ -29,8 +21,6 @@ If you'd like to you can run `tests/e2e_tests.py` to make sure the app is doing
 what is expected of it.  The script requires the `requests` library.  None of
 the code in this repo should install anything outside of a docker image, so you
 will have to ensure `requests` is present.
-
----
 
 ## Additional Info
 

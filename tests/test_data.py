@@ -48,7 +48,7 @@ TEST_CASES = [
 ]
 
 
-RECEIPTS_WITH_INCOMPLETE_DATA = [{k: v for k, v in deepcopy(TEST_CASES[0]["payload"]).items()} for _ in range(6)]
+RECEIPTS_WITH_INCOMPLETE_DATA = [deepcopy(TEST_CASES[0]["payload"]) for _ in range(6)]
 del(RECEIPTS_WITH_INCOMPLETE_DATA[0]["retailer"])
 del(RECEIPTS_WITH_INCOMPLETE_DATA[1]["purchaseDate"])
 del(RECEIPTS_WITH_INCOMPLETE_DATA[2]["purchaseTime"])
@@ -57,7 +57,7 @@ del(RECEIPTS_WITH_INCOMPLETE_DATA[4]["items"][0]["shortDescription"])
 del(RECEIPTS_WITH_INCOMPLETE_DATA[5]["items"][0]["price"])
 
 
-RECEIPTS_WITH_BAD_DATA = [{k: v for k, v in deepcopy(TEST_CASES[0]["payload"]).items()} for _ in range(6)]
+RECEIPTS_WITH_BAD_DATA = [deepcopy(TEST_CASES[0]["payload"]) for _ in range(6)]
 RECEIPTS_WITH_BAD_DATA[0]["retailer"] = "*"
 RECEIPTS_WITH_BAD_DATA[1]["purchaseDate"] = "*"
 RECEIPTS_WITH_BAD_DATA[2]["purchaseTime"] = "*"

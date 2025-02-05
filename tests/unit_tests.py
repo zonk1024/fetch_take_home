@@ -1,8 +1,10 @@
-from pytest import raises
+# 3rd party
 from pydantic import ValidationError
+from pytest import raises
 
+# internal
 import app
-from .test_data import TEST_CASES, RECEIPTS_WITH_BAD_DATA, RECEIPTS_WITH_INCOMPLETE_DATA
+from .test_data import RECEIPTS_WITH_BAD_DATA, RECEIPTS_WITH_INCOMPLETE_DATA, TEST_CASES
 
 
 # TODO: always more tests...

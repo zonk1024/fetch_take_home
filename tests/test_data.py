@@ -1,3 +1,4 @@
+# stdlib
 from copy import deepcopy
 
 TEST_CASES = [
